@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* VARIABLES */
 
 :root {
@@ -12,6 +19,7 @@
 
 html {
   height: 100%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -21,7 +29,12 @@ img {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
   margin: 0;
@@ -40,6 +53,7 @@ body {
   padding: 0;
   border: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -48,7 +62,7 @@ body {
 /* CONTAINER */
 
 .container {
-  /* max-width: your-size-here; */
+  max-width: 1250px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
@@ -57,44 +71,160 @@ body {
 
 /* STICKY-FOOTER */
 .site-main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 .gridd__box {
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 100px 100px 100px;
-  grid-template-columns: repeat(4, 100px);
+  margin: 100px;
+  -ms-grid-rows: 185px 20px 185px 20px 185px 20px 185px 20px 185px;
+  grid-template-rows: repeat(5, 185px);
+  -ms-grid-columns: 250px 20px 250px 20px 250px;
+  grid-template-columns: repeat(3, 250px);
   grid-gap: 20px;
 }
-.grid {
-  background-color: green;
+.gridd__box > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.gridd__box > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.gridd__box > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+.gridd__box > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.gridd__box > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.gridd__box > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+.gridd__box > *:nth-child(7) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+.gridd__box > *:nth-child(8) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+.gridd__box > *:nth-child(9) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+.gridd__box > *:nth-child(10) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+}
+.gridd__box > *:nth-child(11) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 3;
+}
+.gridd__box > *:nth-child(12) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+}
+.gridd__box > *:nth-child(13) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+}
+.gridd__box > *:nth-child(14) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 3;
+}
+.gridd__box > *:nth-child(15) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 5;
 }
 
 .grid__1 {
-  grid-row-start: 1;
-  grid-row-end: 4;
+  background-image: url("/images/bomba.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .grid__2 {
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+  -ms-grid-column: 2;
   grid-column-start: 2;
-  grid-column-end: 4;
-}
-.grid__6 {
-  grid-column-start: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  background-image: url("/images/duxtr.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .grid__3 {
-  background-color: red;
+  background-image: url("/images/bomba.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.grid__4 {
+  -ms-grid-row: 3;
+  grid-row-start: 3;
+  -ms-grid-row-span: 2;
+  grid-row-end: 5;
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  background-image: url("/images/tom-qari.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .grid__5 {
-  background-color: red;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 2;
+  grid-row-end: 4;
+  -ms-grid-column: 0;
+  grid-column-start: 0;
+  background-image: url("/images/kacok.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.grid__7 {
-  background-color: red;
+.grid__6 {
+  -ms-grid-column: 3;
+  grid-column-start: 3;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 2;
+  grid-row-end: 4;
+  background-image: url("/images/tom-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.grid__4 {
-  background-color: yellow;
+.grid__7 {
+  -ms-grid-column: 3;
+  grid-column-start: 3;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  -ms-grid-row-span: 2;
+  grid-row-end: 6;
+  background-image: url("/images/kacok.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .grid__8 {
-  background-color: yellow;
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  -ms-grid-row-span: 2;
+  grid-row-end: 6;
+  background-image: url("/images/tom-qari.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.grid__9 {
+  background-image: url("/images/bomba.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
